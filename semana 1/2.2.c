@@ -16,6 +16,7 @@ int main(){
 
             if (((Array[i] + Array[j]) % Divisor) == 0)
             {
+                
                 Divisiveis++;
             }
             
