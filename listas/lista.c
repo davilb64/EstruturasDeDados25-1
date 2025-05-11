@@ -10,6 +10,8 @@ lista * cria_lista() {
         printf("Nao foi possivel alocar\n");
         return NULL;
     }
+
+    
     
     return l;
     
