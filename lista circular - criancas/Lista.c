@@ -5,7 +5,7 @@
 // Criação de uma nova lista
 Lista* criaLista() {
     Lista* lista = (Lista*) malloc(sizeof(Lista));
-    if (lista) {
+    if (lista != NULL) {
         lista->inicio = NULL;
         lista->tamanho = 0;
     }
@@ -13,8 +13,8 @@ Lista* criaLista() {
 }
 
 // Insere um item no início da lista
-void add(Lista* l, int item) {
-    No* novo = (No*) malloc(sizeof(No));
+void add(Lista * l, int item) {
+    No * novo = (No *) malloc(sizeof(No));
     if (novo) {
         novo->dado = item;
         novo->prox = l->inicio;
@@ -99,20 +99,20 @@ int insereOrdenado(Lista* l, int item){
     novo->prox = NULL;
 
     if (l->tamanho == 0){
-        l->inicio = novo;
-        l->tamanho++;
-        return 1;
+      l->inicio = novo;
+      l->tamanho++;
+      return 1;
     }
 
     No* atual = l->inicio;
     No* proximo = atual->prox;
     while (proximo != NULL){
-        if (proximo != NULL && proximo->dado >= item){
+      if (proximo != NULL && proximo->dado >= item){
         atual->prox = novo;
         novo->prox = proximo;
-            return 1;
-        }
-        atual = proximo;
+          return 1;
+      }
+      atual = proximo;
         proximo = proximo->prox;
     }
     atual->prox = novo;
