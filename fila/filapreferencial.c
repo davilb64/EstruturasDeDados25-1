@@ -19,7 +19,7 @@ int main() {
             printf("com 1 ou mais pessoas\n");
         }
         printf("Escolha uma opcao\n");
-        printf("1 - Inserir item na fila\n2 - Remover item na frente da fila\n3 - Ver item inicial\n4 - Ver tamanho da fila\n5 - Verificar idade da pessoa na frente da fila\n7 - Sair do programa\n");
+        printf("1 - Inserir item na fila\n2 - Remover item na frente da fila\n3 - Ver item inicial\n4 - Ver tamanho da fila\n5 - Verificar idade da pessoa na frente da fila\n6 - Organizar\n7 - Sair do programa\n");
 
         printf("Opcao: ");
         scanf("%d", &opcao);
@@ -50,6 +50,49 @@ int main() {
         else if (opcao == 5)
         {
             verificaIdade(*fila);
+        }
+        else if (opcao == 6)
+        {
+            int count = 0;
+            while (count < fila->tamanho)
+            {
+                if (front(*fila) >= 80)
+                {
+                    enqueue(filaAux, front(*fila));
+                    dequeue(*fila);
+                    count++;
+                }
+                else
+                {
+                    
+                    enqueue(fila, front(*fila));
+                    dequeue(*fila);
+                    count++;
+                }
+            }
+            count = 0;
+            while (count < fila->tamanho)
+            {
+                if (front(*fila) >= 60)
+                {
+                    enqueue(filaAux, front(*fila));
+                    dequeue(*fila);
+                    count++;
+                }
+                else
+                {
+                    count++;
+                    enqueue(fila, front(*fila));
+                    dequeue(*fila);
+                }
+            }
+            while (count < fila->tamanho)
+            {
+                enqueue(filaAux, front(*fila));
+                dequeue(*fila);
+                count++;
+            }
+            
         }
         
         else if (opcao == 7)
