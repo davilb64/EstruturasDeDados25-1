@@ -1,23 +1,15 @@
-#include <stdio.h>
-#include <string.h>
-typedef struct{
+#include <ruelers.h>
 
-       int idade;
-       char sexo;
-       char nome[100];
+int main()
+{
+    int CPBR17 = 1;
 
-} pessoa;
-
-
-int main(){
-
-pessoa pessoa1;
-
-    pessoa1.idade = 20;
-    pessoa1.sexo =  'f';
-    strcpy(pessoa1.nome,"Samara");
-
-    printf("Nome: %s\n Idade: %d\n Sexo: %c\n", pessoa1.nome, pessoa1.idade, pessoa1.sexo);
+    switch (CPBR17)
+    {
+        case 1:
+            printf ("Hello, World!\n");
+            break;
+    }
 
     return 0;
 }

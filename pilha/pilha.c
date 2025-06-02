@@ -31,7 +31,7 @@ void pop(Pilha* p){
         printf("Pilha vazia!\n");
     }
 }
-int peek(Pilha* p){
+int peek(Pilha *p){
     if (p->topo != NULL) {
         return p->topo->dado;
     } else {

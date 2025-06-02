@@ -61,7 +61,9 @@ void dequeue(TipoFila* f){
 int main(){
     int Operacoes, Operacao, Ticket;
     TipoFila* fila = CriaFila();
+    
     scanf("%d",&Operacoes);
+    
     for (int i = 0; i < Operacoes; i++)
     {  
         scanf("%d",&Operacao);
