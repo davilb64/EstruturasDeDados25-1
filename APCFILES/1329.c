@@ -17,6 +17,5 @@ int main() {
         printf("Mary won %d times and John won %d times\n", countMaria, countJoao);
     }
 
-
     return 0;
 }
