@@ -1,0 +1,3 @@
+Pré-ordem (Pre-order): Visita a raiz, depois o filho esquerdo, depois o filho direito. (Raiz -> Esquerda -> Direita)
+Em Ordem (In-order): Visita o filho esquerdo, depois a raiz, depois o filho direito. (Esquerda -> Raiz -> Direita) - Útil para árvores de busca binária, pois retorna os elementos em ordem crescente.
+Pós-ordem (Post-order): Visita o filho esquerdo, depois o filho direito, depois a raiz. (Esquerda -> Direita -> Raiz) - Útil para liberar memória de uma árvore ou avaliar expressões.
